@@ -1,0 +1,56 @@
+{
+  "name": "atividade-react-router",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "vite": "^5.4.10"
+  }
+}
+
+# Atividade React Router: Rotas, Layout, Lazy Loading e Parâmetros Dinâmicos
+
+Aplicação web multi-páginas desenvolvida em React utilizando `react-router-dom`, componentes de layout compartilhados (`Header`, `Sidebar`, `Footer`), carregamento sob demanda (`React.lazy` + `Suspense`), rotas dinâmicas com `useParams` (`/user/:id`) e tratamento de rotas inválidas (Página 404).
+
+## Integrante
+- Kauã Maia de Abreu
+
+## Como executar
+```bash
+npm install
+npm run dev
+```
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+})
+
+node_modules
+dist
+.DS_Store
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade React Router - SPA Multi-páginas</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
